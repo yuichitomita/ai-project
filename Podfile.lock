@@ -1,0 +1,25 @@
+PODS:
+  - SnapKit (3.2.0)
+  - ZLSwipeableViewSwift (0.0.7)
+
+DEPENDENCIES:
+  - SnapKit (~> 3.2.0)
+  - ZLSwipeableViewSwift (from `https://github.com/zhxnlai/ZLSwipeableViewSwift.git`, branch `swift3`)
+
+EXTERNAL SOURCES:
+  ZLSwipeableViewSwift:
+    :branch: swift3
+    :git: https://github.com/zhxnlai/ZLSwipeableViewSwift.git
+
+CHECKOUT OPTIONS:
+  ZLSwipeableViewSwift:
+    :commit: 9999a476b4f3aa931c968228d13ad0ce3c48583c
+    :git: https://github.com/zhxnlai/ZLSwipeableViewSwift.git
+
+SPEC CHECKSUMS:
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  ZLSwipeableViewSwift: f5ee94c2e4220f900f5a129118af2aef23062900
+
+PODFILE CHECKSUM: 5bc5b2caddf464cf218586ec436cde125d507fee
+
+COCOAPODS: 1.2.1
