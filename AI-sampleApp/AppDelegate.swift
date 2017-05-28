@@ -15,7 +15,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //タブバー設定
+        let company:UITabBarItem = UITabBarItem(title: "企業", image: UIImage(named: "company"), tag: 1)
+        let message:UITabBarItem = UITabBarItem(title: "マッチング", image: UIImage(named: "message"), tag: 2)
+        let more:UITabBarItem = UITabBarItem(tabBarSystemItem: .more,tag:3)
+        
+        
+        let mainVC = ViewController()
+        mainVC.tabBarItem = company
+        let navigationController = UINavigationController(rootViewController: mainVC)
+        
+        let chatVC = ChatViewController()
+        chatVC.tabBarItem = message
+        
+        let moreVC = UIViewController()
+        moreVC.tabBarItem = more
+        
+        let viewControllers = [navigationController,chatVC,moreVC]
+        let tabBarController = UITabBarController()
+        tabBarController.setViewControllers(viewControllers, animated: false)
+        
+        tabBarController.tabBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        tabBarController.tabBar.unselectedItemTintColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        tabBarController.tabBar.tintColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        window?.rootViewController = tabBarController
+        window?.makeKeyAndVisible()
+        
+        
         return true
     }
 

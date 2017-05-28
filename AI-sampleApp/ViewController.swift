@@ -75,32 +75,15 @@ class ViewController: UIViewController, UITabBarDelegate {
     }
     
     func setup() {
-        let width = self.view.frame.width
-        let height = self.view.frame.height
-        let tabBarHeight:CGFloat = 49
+        
         
         //UIColor: Mercury
         self.view.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
-        self.title = "新しい会社と出会う"
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
                                                                         NSForegroundColorAttributeName : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
-        
-        tabBar = UITabBar()
-        tabBar.frame = CGRect(x:0,y:height - tabBarHeight,width:width,height:tabBarHeight)
-        tabBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        tabBar.unselectedItemTintColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        tabBar.tintColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
-        
-        let company:UITabBarItem = UITabBarItem(title: "企業", image: UIImage(named: "company"), tag: 1)
-        let message:UITabBarItem = UITabBarItem(title: "マッチング", image: UIImage(named: "message"), tag: 2)
-        let more:UITabBarItem = UITabBarItem(tabBarSystemItem: .more,tag:3)
-        
-        tabBar.items = [company,message,more]
-        tabBar.delegate = self
-        
-        self.view.addSubview(tabBar)
+        self.navigationItem.title = "新しい企業と出会う"
     }
     
 
