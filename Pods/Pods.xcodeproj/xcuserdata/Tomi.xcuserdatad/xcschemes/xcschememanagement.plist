@@ -4,12 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>JSQMessagesViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSQSystemSoundPlayer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-AI-sampleApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Socket.IO-Client-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6DAEAFD65E231EA19078E884211714D3</key>
+		<key>0796FBEE0ACE3078547771DD6A3EC035</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7A00802D82A43FEFB2D0D32CA2AB65AC</key>
+		<key>0B66D2EA2349F6F83CA4027210CEEF23</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9F484F8993259BBE93B2A7FFA27F8C91</key>
+		<key>29E0601A2ABB7092D845B41E272347EB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>588CB8232F4E89383008EF87D89C991B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C7DCF2B547F7871B9BFD74DE93B0E173</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D0581AF7BF4A6DA140D280B19ECC7BFF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
