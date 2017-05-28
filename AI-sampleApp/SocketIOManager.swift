@@ -21,10 +21,11 @@ class SocketIOManager: NSObject {
     
     private override init() {super.init()}
     
-    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string:"") as! URL)
+    var socket: SocketIOClient = SocketIOClient(socketURL: NSURL(string:"http://153.126.157.154:1337") as! URL)
     
     //接続
     func establishConnection(){
+        socket.joinNamespace("/chat")
         socket.on("connect") { data in
             print("iOS側からサーバーへsocket接続")
         }
@@ -40,8 +41,9 @@ class SocketIOManager: NSObject {
     }
     
     //メッセージ送信
-    func sendMessage(_ message: String, name: String) {
-        socket.emit("from_client", name, message)
+    func sendMessage(_ room: String, userId: String, message: String, name: String) {
+        let data = ["room":room,"userId":userId,"userName":name,"msg":message]
+        socket.emit("from_client", data)
     }
     
     //メッセージ受信
@@ -53,4 +55,12 @@ class SocketIOManager: NSObject {
             completionHandler(jsqMessage!)
         }
     }
+    
+    //room参加
+    func joinRoom(_ room: String) {
+        //let data = ["room": room]
+        socket.emit("join_room", room)
+    }
+    
+   
 }

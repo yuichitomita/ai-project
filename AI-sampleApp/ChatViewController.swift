@@ -20,11 +20,12 @@ class ChatViewController: JSQMessagesViewController {
         //キーボードのジェスチャ-登録
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ChatViewController.dismissKeyboard))
         self.view.addGestureRecognizer(tap)
+        self.title = "マッチング"
         
     }
     
     func setChatModuleParam(){
-        senderDisplayName = "A"
+        senderDisplayName = "とみ"
         senderId = "self"
         self.name = "テスト"
         
@@ -33,6 +34,9 @@ class ChatViewController: JSQMessagesViewController {
             self.messages.append(messageInfo)
             self.finishReceivingMessage(animated: true)
         }
+        
+        SocketIOManager.sharedInstance.joinRoom(senderDisplayName)
+
     }
     
     
@@ -80,8 +84,10 @@ extension ChatViewController {
         self.messages.append(message!)
         self.finishReceivingMessage(animated: true)
         
+        //var room = senderDisplayName
+        var room = "room-1"
         // サーバーへメッセージ送信
-        SocketIOManager.sharedInstance.sendMessage(text, name: name!)
+        SocketIOManager.sharedInstance.sendMessage(room, userId: senderId, message: text, name: senderDisplayName)
         
         // TextFieldのテキストをクリア
         self.inputToolbar.contentView.textView.text = ""
