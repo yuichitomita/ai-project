@@ -10,6 +10,8 @@
 		BDFCA706982E8C33886057DE /* Pods_AI_sampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3A65F1864961218F417411 /* Pods_AI_sampleApp.framework */; };
 		E64175FC1EBDB6E3005C512C /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64175FB1EBDB6E3005C512C /* CardView.xib */; };
 		E68800D51EBDA89300663A2B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68800D41EBDA89300663A2B /* CardView.swift */; };
+		E68969BF1EDACAB4001F741D /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68969BE1EDACAB4001F741D /* SocketIOManager.swift */; };
+		E68969C11EDAD507001F741D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68969C01EDAD507001F741D /* ChatViewController.swift */; };
 		E68DF1101EBDA7C900D0C442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68DF10F1EBDA7C900D0C442 /* AppDelegate.swift */; };
 		E68DF1121EBDA7C900D0C442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68DF1111EBDA7C900D0C442 /* ViewController.swift */; };
 		E68DF1151EBDA7C900D0C442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E68DF1131EBDA7C900D0C442 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		A92BBF69999569D00E4DAFC6 /* Pods-AI-sampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-sampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AI-sampleApp/Pods-AI-sampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		E64175FB1EBDB6E3005C512C /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		E68800D41EBDA89300663A2B /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		E68969BE1EDACAB4001F741D /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
+		E68969C01EDAD507001F741D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E68DF10C1EBDA7C900D0C442 /* AI-sampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI-sampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68DF10F1EBDA7C900D0C442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E68DF1111EBDA7C900D0C442 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				E68DF1181EBDA7C900D0C442 /* LaunchScreen.storyboard */,
 				E68DF11B1EBDA7C900D0C442 /* Info.plist */,
 				E68800D41EBDA89300663A2B /* CardView.swift */,
+				E68969BE1EDACAB4001F741D /* SocketIOManager.swift */,
+				E68969C01EDAD507001F741D /* ChatViewController.swift */,
 			);
 			path = "AI-sampleApp";
 			sourceTree = "<group>";
@@ -219,8 +225,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E68969BF1EDACAB4001F741D /* SocketIOManager.swift in Sources */,
 				E68DF1121EBDA7C900D0C442 /* ViewController.swift in Sources */,
 				E68800D51EBDA89300663A2B /* CardView.swift in Sources */,
+				E68969C11EDAD507001F741D /* ChatViewController.swift in Sources */,
 				E68DF1101EBDA7C900D0C442 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
