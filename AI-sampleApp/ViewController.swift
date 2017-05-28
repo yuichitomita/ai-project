@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITabBarDelegate {
     let swipeableView = ZLSwipeableView()
     let images = [UIImage(named: "bey"), UIImage(named: "pb"), UIImage(named: "kyouken"), UIImage(named: "cookingpapa")]
     var imageIndex = 0
-    private var myTabBar:UITabBar!
+    private var tabBar:UITabBar!
     
     override func viewDidLayoutSubviews() {
         swipeableView.nextView = {
@@ -54,7 +54,6 @@ class ViewController: UIViewController, UITabBarDelegate {
             print("Did disappear swiping view")
         }
         
-        self.view.backgroundColor = UIColor.lightGray
     }
 
     func nextCardView() -> CardView? {
@@ -78,29 +77,30 @@ class ViewController: UIViewController, UITabBarDelegate {
     func setup() {
         let width = self.view.frame.width
         let height = self.view.frame.height
-        //デフォルトは49
         let tabBarHeight:CGFloat = 49
         
-        /**   TabBarを設置   **/
-        myTabBar = UITabBar()
-        myTabBar.frame = CGRect(x:0,y:height - tabBarHeight,width:width,height:tabBarHeight)
-        //バーの色
-        myTabBar.barTintColor = UIColor.lightGray
-        //選択されていないボタンの色
-        myTabBar.unselectedItemTintColor = UIColor.white
-        //ボタンを押した時の色
-        myTabBar.tintColor = UIColor.blue
+        //UIColor: Mercury
+        self.view.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         
-        //ボタンを生成
+        self.title = "新しい会社と出会う"
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
+                                                                        NSForegroundColorAttributeName : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
+        
+        tabBar = UITabBar()
+        tabBar.frame = CGRect(x:0,y:height - tabBarHeight,width:width,height:tabBarHeight)
+        tabBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        tabBar.unselectedItemTintColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        tabBar.tintColor = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 1)
+        
         let company:UITabBarItem = UITabBarItem(title: "企業", image: UIImage(named: "company"), tag: 1)
         let message:UITabBarItem = UITabBarItem(title: "マッチング", image: UIImage(named: "message"), tag: 2)
         let more:UITabBarItem = UITabBarItem(tabBarSystemItem: .more,tag:3)
-        //ボタンをタブバーに配置する
-        myTabBar.items = [company,message,more]
-        //デリゲートを設定する
-        myTabBar.delegate = self
         
-        self.view.addSubview(myTabBar)
+        tabBar.items = [company,message,more]
+        tabBar.delegate = self
+        
+        self.view.addSubview(tabBar)
     }
     
 
