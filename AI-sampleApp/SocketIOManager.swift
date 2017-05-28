@@ -12,7 +12,7 @@ import JSQMessagesViewController
 
 class SocketIOManager: NSObject {
     //Singleton
-    class var sharedTnstance: SocketIOManager {
+    class var sharedInstance: SocketIOManager {
         struct Static {
             static let instance: SocketIOManager = SocketIOManager()
         }
