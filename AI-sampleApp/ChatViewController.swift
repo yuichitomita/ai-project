@@ -85,7 +85,7 @@ extension ChatViewController {
         self.finishReceivingMessage(animated: true)
         
         //var room = senderDisplayName
-        var room = "room-1"
+        let room = "room-1"
         // サーバーへメッセージ送信
         SocketIOManager.sharedInstance.sendMessage(room, userId: senderId, message: text, name: senderDisplayName)
         
