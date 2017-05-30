@@ -12,6 +12,9 @@ struct User {
     // ユーザーのid
     let id: String
     
+    // ユーザー名
+    let userName: String
+    
     // 会社名
     let companyName: String
     
