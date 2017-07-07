@@ -34,7 +34,10 @@ class MessageListViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
                                                                         NSForegroundColorAttributeName : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
-        self.navigationItem.title = "マッチング"
+        navigationItem.title = "マッチング"
+        //戻るボタンセット
+        let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backButtonItem
     }
 
     
@@ -44,6 +47,10 @@ extension MessageListViewController: UITableViewDelegate {
     //cellがタップされたのを検知した時に実行する処理
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("セルがタップされたよ！")
+        let targetViewController = ChatViewController()
+        //遷移時にタブバーを隠す
+        targetViewController.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(targetViewController, animated: false)
     }
     
     // セルの見積もりの高さを指定する処理
