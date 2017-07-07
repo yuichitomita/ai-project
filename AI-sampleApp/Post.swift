@@ -8,11 +8,13 @@
 
 import Foundation
 struct Post {
+    // 投稿ID
     let id: String
     
     //本文
     let text: String
     
+    // マッチング相手
     let user: User
     
 }
