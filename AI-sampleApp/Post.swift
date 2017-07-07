@@ -15,6 +15,6 @@ struct Post {
     let text: String
     
     // マッチング相手
-    let user: User
+    let company: Company
     
 }
