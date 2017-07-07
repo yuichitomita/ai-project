@@ -20,7 +20,7 @@ class PostsTableViewCell: UITableViewCell {
 
     func fill(post: Post) {
         // profileImageURLから画像をダウンロードしてくる処理
-        let downloadTask = URLSession.shared.dataTask(with: URL(string: post.user.profileImageURL)!) { [weak self] data, response, error in
+        let downloadTask = URLSession.shared.dataTask(with: URL(string: post.company.profileImageURL)!) { [weak self] data, response, error in
             if let error = error {
                 print(error)
                 return
@@ -31,8 +31,8 @@ class PostsTableViewCell: UITableViewCell {
             }
         }
         downloadTask.resume()
-        companyName.text = post.user.companyName
-        companyTypeLabel.text = post.user.companyType
+        companyName.text = post.company.companyName
+        companyTypeLabel.text = post.company.companyType
         textContentLabel.text = post.text
     }
     
