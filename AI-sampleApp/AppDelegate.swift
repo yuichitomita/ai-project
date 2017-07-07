@@ -24,8 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let mainVC = ViewController()
         mainVC.tabBarItem = company
-        let navigationController = UINavigationController(rootViewController: mainVC)
-        
+        //let navigationController = UINavigationController(rootViewController: mainVC)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let chatVC = storyboard.instantiateViewController(withIdentifier: "MessageList") as! MessageListViewController
@@ -34,7 +33,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let moreVC = UIViewController()
         moreVC.tabBarItem = more
         
-        let viewControllers = [navigationController,chatVC,moreVC]
+        let navigationController1 = UINavigationController(rootViewController: mainVC)
+        let navigationController2 = UINavigationController(rootViewController: chatVC)
+        let navigationController3 = UINavigationController(rootViewController: moreVC)
+        
+        
+        
+        let viewControllers = [navigationController1,navigationController2,navigationController3]
         let tabBarController = UITabBarController()
         tabBarController.setViewControllers(viewControllers, animated: false)
         
