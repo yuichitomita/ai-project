@@ -16,6 +16,7 @@ class MessageListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -28,6 +29,15 @@ class MessageListViewController: UIViewController {
         tableView.reloadData()
         
     }
+    
+    func setup() {
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
+                                                                        NSForegroundColorAttributeName : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
+        self.navigationItem.title = "マッチング"
+    }
+
+    
 }
 
 extension MessageListViewController: UITableViewDelegate {
