@@ -26,7 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         mainVC.tabBarItem = company
         let navigationController = UINavigationController(rootViewController: mainVC)
         
-        let chatVC = ChatViewController()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let chatVC = storyboard.instantiateViewController(withIdentifier: "MessageList") as! MessageListViewController
         chatVC.tabBarItem = message
         
         let moreVC = UIViewController()
