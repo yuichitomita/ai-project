@@ -19,6 +19,14 @@ class MessageListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        // ダミーデータ作成
+        let company = Company(id: "1", companyName: "スピードリンクジャパン", companyType: "SE エンジニア", profileImageURL: "https://pbs.twimg.com/profile_images/817331078260101122/XM1FgdlH.jpg")
+        let post = Post(id: "1", text: "マッチングしました", company: company)
+        let posts = [post]
+        self.posts = posts
+        
+        tableView.reloadData()
+        
     }
 }
 
@@ -49,7 +57,7 @@ extension MessageListViewController: UITableViewDataSource {
     // 描画するcellを設定する関数
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostsTableViewCell") as! PostsTableViewCell
-        
+        cell.fill(post: posts[indexPath.row])
         return cell
     }
 }
