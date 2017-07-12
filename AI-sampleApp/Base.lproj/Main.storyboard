@@ -38,11 +38,11 @@
                         <viewControllerLayoutGuide type="bottom" id="3jR-D8-MkN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ai6-M9-ZaP">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BZu-6Y-Sno">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostsTableViewCell" rowHeight="115" id="n5h-Yz-NWF" customClass="PostsTableViewCell" customModule="AI_sampleApp" customModuleProvider="target">
@@ -60,34 +60,33 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="スピードリンクジャパン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzJ-67-vg3">
-                                                    <rect key="frame" x="66" y="0.0" width="246" height="21"/>
+                                                    <rect key="frame" x="66" y="12" width="246" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SES エンジニア" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovW-Sa-qmp">
-                                                    <rect key="frame" x="66" y="29" width="246" height="15"/>
+                                                    <rect key="frame" x="66" y="41" width="246" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="5/26にマッチングしました" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgk-RA-slN">
-                                                    <rect key="frame" x="66" y="51.5" width="254" height="47"/>
+                                                    <rect key="frame" x="66" y="63.5" width="254" height="35"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="BzJ-67-vg3" firstAttribute="top" secondItem="uHS-oB-7lo" secondAttribute="top" id="4i8-dj-CY6"/>
                                                 <constraint firstAttribute="trailing" secondItem="ovW-Sa-qmp" secondAttribute="trailing" constant="8" id="79d-Bc-BbR"/>
-                                                <constraint firstItem="BzJ-67-vg3" firstAttribute="top" secondItem="uHS-oB-7lo" secondAttribute="top" id="9fX-P7-YTO"/>
                                                 <constraint firstItem="ovW-Sa-qmp" firstAttribute="leading" secondItem="NCx-0w-Gu2" secondAttribute="trailing" constant="8" id="Fy5-gv-4Bu"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Sgk-RA-slN" secondAttribute="bottom" constant="8" id="KyC-TI-dyO"/>
                                                 <constraint firstItem="ovW-Sa-qmp" firstAttribute="leading" secondItem="NCx-0w-Gu2" secondAttribute="trailing" constant="8" id="QPh-PC-h41"/>
                                                 <constraint firstItem="Sgk-RA-slN" firstAttribute="leading" secondItem="uHS-oB-7lo" secondAttribute="leading" constant="66" id="QgE-Hi-Y9c"/>
                                                 <constraint firstItem="ovW-Sa-qmp" firstAttribute="top" secondItem="BzJ-67-vg3" secondAttribute="bottom" constant="8" id="Tig-OG-6xj"/>
                                                 <constraint firstItem="NCx-0w-Gu2" firstAttribute="leading" secondItem="uHS-oB-7lo" secondAttribute="leading" constant="8" id="Un2-PW-6NV"/>
+                                                <constraint firstItem="BzJ-67-vg3" firstAttribute="top" secondItem="uHS-oB-7lo" secondAttribute="topMargin" constant="4" id="WwG-8Q-X27"/>
                                                 <constraint firstItem="Sgk-RA-slN" firstAttribute="top" secondItem="ovW-Sa-qmp" secondAttribute="bottom" constant="8" id="aG5-ns-nm1"/>
                                                 <constraint firstItem="BzJ-67-vg3" firstAttribute="leading" secondItem="NCx-0w-Gu2" secondAttribute="trailing" constant="8" id="fKu-rW-PZe"/>
                                                 <constraint firstAttribute="trailing" secondItem="BzJ-67-vg3" secondAttribute="trailing" constant="8" id="g1v-lA-gjb"/>
@@ -108,12 +107,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BZu-6Y-Sno" secondAttribute="trailing" id="4yD-4O-hGt"/>
                             <constraint firstItem="BZu-6Y-Sno" firstAttribute="leading" secondItem="ai6-M9-ZaP" secondAttribute="leading" id="9xg-Q1-GS5"/>
                             <constraint firstItem="BZu-6Y-Sno" firstAttribute="top" secondItem="fwp-dq-6Q9" secondAttribute="bottom" id="L16-ts-bJL"/>
                             <constraint firstItem="3jR-D8-MkN" firstAttribute="top" secondItem="BZu-6Y-Sno" secondAttribute="bottom" id="R6l-jH-HuS"/>
                             <constraint firstAttribute="trailing" secondItem="BZu-6Y-Sno" secondAttribute="trailing" id="Y1r-DY-NfX"/>
+                            <constraint firstItem="BZu-6Y-Sno" firstAttribute="leading" secondItem="ai6-M9-ZaP" secondAttribute="leading" id="hYN-EP-6Ot"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="o7c-y6-K9y"/>
                     <connections>
                         <outlet property="tableView" destination="BZu-6Y-Sno" id="FjY-9g-O2N"/>
