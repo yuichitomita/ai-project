@@ -30,13 +30,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let chatVC = storyboard.instantiateViewController(withIdentifier: "MessageList") as! MessageListViewController
         chatVC.tabBarItem = message
         
-        let moreVC = UIViewController()
+        let moreVC = storyboard.instantiateViewController(withIdentifier: "question") as! QuestionViewController
         moreVC.tabBarItem = more
         
         let navigationController1 = UINavigationController(rootViewController: mainVC)
         let navigationController2 = UINavigationController(rootViewController: chatVC)
         let navigationController3 = UINavigationController(rootViewController: moreVC)
-        
         
         
         let viewControllers = [navigationController1,navigationController2,navigationController3]
