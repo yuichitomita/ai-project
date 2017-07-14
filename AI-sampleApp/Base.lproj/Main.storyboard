@@ -49,7 +49,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="115"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n5h-Yz-NWF" id="uHS-oB-7lo">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="115"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NCx-0w-Gu2">
@@ -160,6 +160,210 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qyx-dQ-Lu6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="71" y="229"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="dPQ-nb-F7J">
+            <objects>
+                <viewController storyboardIdentifier="question" id="7zy-Bc-tiz" customClass="QuestionViewController" customModule="AI_sampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6qD-Ez-Uzb"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Fe-qQ-QAf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c0f-zo-vkf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bda-vj-XGA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="97" id="Eef-be-5do" customClass="QuestionTableViewCell" customModule="AI_sampleApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eef-be-5do" id="Ysk-v7-TQQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01. いつも新しい体験を探し求めている" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ome-bs-GXZ">
+                                                    <rect key="frame" x="4" y="4" width="312" height="38.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="uP8-p4-QBk">
+                                                    <rect key="frame" x="16" y="46.5" width="288" height="42"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GiN-2e-vC6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="32" height="42"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coE-26-Tpw" customClass="QuestionCheckButton" customModule="AI_sampleApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="34"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="32" id="LKk-ny-iyg"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="16"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" red="0.47450980539999998" green="0.8392156959" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="2"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="全くそう思わない" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ADZ-5e-qYv">
+                                                                    <rect key="frame" x="0.0" y="34" width="32" height="8"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cVu-QV-3IT">
+                                                            <rect key="frame" x="85.5" y="0.0" width="32" height="42"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llv-QP-ocL" customClass="QuestionCheckButton" customModule="AI_sampleApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="32" id="gtl-vT-BM4"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" red="0.47450980539999998" green="0.8392156959" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="2"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="16"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="そう思わない" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hDs-Qq-ydV">
+                                                                    <rect key="frame" x="0.0" y="30" width="32" height="12"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Ko-wx-S6T">
+                                                            <rect key="frame" x="170.5" y="0.0" width="32" height="42"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Bm-r9-0lW" customClass="QuestionCheckButton" customModule="AI_sampleApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="32" id="kkr-mh-VM0"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" red="0.47450980539999998" green="0.8392156959" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="16"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="2"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="そう思う" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4ME-Ie-Sy4">
+                                                                    <rect key="frame" x="0.0" y="30" width="32" height="12"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ixh-Cf-0C6">
+                                                            <rect key="frame" x="256" y="0.0" width="32" height="42"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXL-Gq-fkY" customClass="QuestionCheckButton" customModule="AI_sampleApp" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="30"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="32" id="h6R-2O-TIi"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" red="0.47450980539999998" green="0.8392156959" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                            <real key="value" value="16"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                            <real key="value" value="2"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </button>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="とてもそう思う" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8Jm-Xf-fsD">
+                                                                    <rect key="frame" x="0.0" y="30" width="32" height="12"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="m2A-xi-A6s"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uP8-p4-QBk" firstAttribute="leading" secondItem="Ysk-v7-TQQ" secondAttribute="leading" constant="16" id="HGb-t3-GTe"/>
+                                                <constraint firstAttribute="trailing" secondItem="uP8-p4-QBk" secondAttribute="trailing" constant="16" id="Ntg-3M-hZI"/>
+                                                <constraint firstAttribute="trailing" secondItem="ome-bs-GXZ" secondAttribute="trailing" constant="4" id="YqR-yu-GU1"/>
+                                                <constraint firstItem="uP8-p4-QBk" firstAttribute="top" secondItem="ome-bs-GXZ" secondAttribute="bottom" constant="4" id="Ziq-MD-dRu"/>
+                                                <constraint firstAttribute="bottom" secondItem="uP8-p4-QBk" secondAttribute="bottom" constant="8" id="jtC-ML-p3y"/>
+                                                <constraint firstItem="ome-bs-GXZ" firstAttribute="top" secondItem="Ysk-v7-TQQ" secondAttribute="top" constant="4" id="qxl-Ps-Ure"/>
+                                                <constraint firstItem="ome-bs-GXZ" firstAttribute="leading" secondItem="Ysk-v7-TQQ" secondAttribute="leading" constant="4" id="vGs-FP-lAW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="questionLabel" destination="ome-bs-GXZ" id="AbJ-K4-ZN0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bda-vj-XGA" firstAttribute="leading" secondItem="c0f-zo-vkf" secondAttribute="leading" id="Fpe-dG-UBS"/>
+                            <constraint firstItem="4Fe-qQ-QAf" firstAttribute="top" secondItem="bda-vj-XGA" secondAttribute="bottom" id="PK0-NT-nZF"/>
+                            <constraint firstAttribute="trailing" secondItem="bda-vj-XGA" secondAttribute="trailing" id="Sje-xy-Hor"/>
+                            <constraint firstItem="bda-vj-XGA" firstAttribute="top" secondItem="6qD-Ez-Uzb" secondAttribute="bottom" id="qIO-oW-ei1"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" id="Xl9-kk-hyO"/>
+                    <connections>
+                        <outlet property="tableView" destination="bda-vj-XGA" id="5Yg-yE-mMx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOI-Mz-lHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080" y="1011"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="V9x-2e-Zoe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P1X-e9-ckC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IWU-5D-B7f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7zy-Bc-tiz" kind="relationship" relationship="rootViewController" id="3SW-TI-3ha"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Dc-mM-tNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="71" y="1011"/>
         </scene>
     </scenes>
 </document>
