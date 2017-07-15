@@ -2,12 +2,14 @@ PODS:
   - JSQMessagesViewController (7.3.4):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
+  - LTHRadioButton (1.1.1)
   - SnapKit (3.2.0)
   - Socket.IO-Client-Swift (8.2.0)
   - ZLSwipeableViewSwift (0.0.7)
 
 DEPENDENCIES:
   - JSQMessagesViewController
+  - LTHRadioButton
   - SnapKit (~> 3.2.0)
   - Socket.IO-Client-Swift (~> 8.2.0)
   - ZLSwipeableViewSwift (from `https://github.com/zhxnlai/ZLSwipeableViewSwift.git`, branch `swift3`)
@@ -25,10 +27,11 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  LTHRadioButton: 6d54db446b2edba0eafcb65b28deedb09dad8a47
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   Socket.IO-Client-Swift: 900cf511777045c80d1ce1f11f71261e87765dd1
   ZLSwipeableViewSwift: f5ee94c2e4220f900f5a129118af2aef23062900
 
-PODFILE CHECKSUM: 8d70bed1ee6ef66cf226240c0b37453f73b5ee2f
+PODFILE CHECKSUM: f93813a7c27ce4d2cf359a8f911057f6b39ff28d
 
 COCOAPODS: 1.2.1
