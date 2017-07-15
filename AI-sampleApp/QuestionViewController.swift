@@ -15,6 +15,8 @@ class QuestionViewController: UIViewController {
     // テーブル表示用のデータソース
     var questions: [Question] = [Question]()
     
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -59,6 +61,7 @@ class QuestionViewController: UIViewController {
         //戻るボタンセット
         let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButtonItem
+    
     }
 
 
@@ -92,6 +95,7 @@ extension QuestionViewController: UITableViewDataSource {
     // 描画するcellを設定する関数
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell") as! QuestionTableViewCell
+        cell.setup()
         cell.fill(question: questions[indexPath.row])
         return cell
     }
