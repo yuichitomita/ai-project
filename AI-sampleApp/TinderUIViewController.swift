@@ -38,10 +38,12 @@ class TinderUIViewController: UIViewController {
             thumbImageView.tintColor = UIColor.red
         }
         
+        thumbImageView.alpha = abs(xFromCenter) / view.center.x
         
         if sender.state == UIGestureRecognizerState.ended {
             UIView.animate(withDuration: 0.2) {
                 card.center = self.view.center
+                self.thumbImageView.alpha = 0.0
             }
         }
     }
