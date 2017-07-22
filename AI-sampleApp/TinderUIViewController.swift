@@ -41,6 +41,24 @@ class TinderUIViewController: UIViewController {
         thumbImageView.alpha = abs(xFromCenter) / view.center.x
         
         if sender.state == UIGestureRecognizerState.ended {
+            
+            if card.center.x < 75 {
+                // Move off to the left side
+                UIView.animate(withDuration: 0.3, animations: {
+                    card.center = CGPoint(x: card.center.x - 200, y: card.center.y + 75)
+                    card.alpha = 0
+                })
+                return
+            }else if card.center.x > (view.frame.width - 75){
+                // Move off to the right side
+                UIView.animate(withDuration: 0.3, animations: {
+                    card.center = CGPoint(x: card.center.x + 200, y: card.center.y + 75)
+                    card.alpha = 0
+                })
+                return
+                
+            }
+            
             UIView.animate(withDuration: 0.2) {
                 card.center = self.view.center
                 self.thumbImageView.alpha = 0.0
