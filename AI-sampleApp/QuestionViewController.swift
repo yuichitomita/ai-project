@@ -96,7 +96,9 @@ extension QuestionViewController: UITableViewDataSource {
     // 描画するcellを設定する関数
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard indexPath.row < questions.count else {
-            let cell = UITableViewCell()
+            let cell = tableView.dequeueReusableCell(withIdentifier: "completeCell", for: indexPath) as! CompleteTableViewCell
+            // button角丸
+            cell.completeButton.layer.cornerRadius = 5.0
             return cell
         }
         
