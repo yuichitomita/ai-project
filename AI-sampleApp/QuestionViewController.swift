@@ -89,14 +89,21 @@ extension QuestionViewController: UITableViewDelegate {
 extension QuestionViewController: UITableViewDataSource {
     // 何個のcellを生成するかを設定する関数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return questions.count
+        // 最終行を追加(+1)
+        return questions.count + 1
     }
     
     // 描画するcellを設定する関数
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard indexPath.row < questions.count else {
+            let cell = UITableViewCell()
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "questionCell") as! QuestionTableViewCell
         cell.setup()
         cell.fill(question: questions[indexPath.row])
+      
         return cell
     }
 }
