@@ -54,7 +54,7 @@ class QuestionViewController: UIViewController {
     }
     
     func setup() {
-        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
                                                                         NSForegroundColorAttributeName : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
         navigationItem.title = "Question"
@@ -64,6 +64,12 @@ class QuestionViewController: UIViewController {
     
     }
 
+    //完了ボタン押下時
+    @IBAction func completButtonTap(_ sender: Any) {
+        let completeVC = UIViewController()
+        let navi = UINavigationController(rootViewController: completeVC)
+        present(navi, animated: false)
+    }
 
 }
 
@@ -76,10 +82,10 @@ extension QuestionViewController: UITableViewDelegate {
     
     // セルの見積もりの高さを指定する処理
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 150
     }
     
-    // セルの高さを指定する処理
+    // セルの高さを指定する処理œ
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // UITableViewCellの高さを自動で取得する値
         return UITableViewAutomaticDimension

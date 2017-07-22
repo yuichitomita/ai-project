@@ -173,25 +173,28 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bda-vj-XGA">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bda-vj-XGA">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="97" id="Eef-be-5do" customClass="QuestionTableViewCell" customModule="AI_sampleApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="97"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="126" id="Eef-be-5do" customClass="QuestionTableViewCell" customModule="AI_sampleApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="126"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eef-be-5do" id="Ysk-v7-TQQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01. いつも新しい体験を探し求めている" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ome-bs-GXZ">
-                                                    <rect key="frame" x="4" y="8" width="312" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <rect key="frame" x="4" y="8" width="312" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="vUU-hk-oIP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fnD-sr-JOy">
-                                                    <rect key="frame" x="8" y="34" width="304" height="55.5"/>
+                                                    <rect key="frame" x="8" y="55" width="304" height="63.5"/>
                                                     <segments>
                                                         <segment title="いいえ" width="75.25"/>
                                                         <segment title="すこしそうだ"/>
@@ -202,13 +205,14 @@
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="fnD-sr-JOy" secondAttribute="trailing" constant="8" id="QWN-pY-2Bp"/>
-                                                <constraint firstItem="fnD-sr-JOy" firstAttribute="top" secondItem="ome-bs-GXZ" secondAttribute="bottom" constant="8" id="V63-8j-XVk"/>
-                                                <constraint firstItem="fnD-sr-JOy" firstAttribute="leading" secondItem="Ysk-v7-TQQ" secondAttribute="leading" constant="8" id="WAk-RJ-zIH"/>
-                                                <constraint firstAttribute="trailing" secondItem="ome-bs-GXZ" secondAttribute="trailing" constant="4" id="YqR-yu-GU1"/>
-                                                <constraint firstAttribute="bottom" secondItem="fnD-sr-JOy" secondAttribute="bottom" constant="8" id="ejo-5k-nbe"/>
-                                                <constraint firstItem="ome-bs-GXZ" firstAttribute="top" secondItem="Ysk-v7-TQQ" secondAttribute="top" constant="8" id="qxl-Ps-Ure"/>
-                                                <constraint firstItem="ome-bs-GXZ" firstAttribute="leading" secondItem="Ysk-v7-TQQ" secondAttribute="leading" constant="4" id="vGs-FP-lAW"/>
+                                                <constraint firstItem="fnD-sr-JOy" firstAttribute="leading" secondItem="Ysk-v7-TQQ" secondAttribute="leading" constant="8" id="2eo-lE-9bP"/>
+                                                <constraint firstItem="ome-bs-GXZ" firstAttribute="leading" secondItem="Ysk-v7-TQQ" secondAttribute="leading" constant="4" id="7NA-xP-K5a"/>
+                                                <constraint firstAttribute="trailing" secondItem="ome-bs-GXZ" secondAttribute="trailing" constant="4" id="Yos-hw-38T"/>
+                                                <constraint firstAttribute="trailing" secondItem="fnD-sr-JOy" secondAttribute="trailing" constant="8" id="ZVQ-ID-zIR"/>
+                                                <constraint firstAttribute="bottom" secondItem="fnD-sr-JOy" secondAttribute="bottom" constant="8" id="Zoa-QA-6Dv"/>
+                                                <constraint firstItem="ome-bs-GXZ" firstAttribute="top" secondItem="Ysk-v7-TQQ" secondAttribute="top" constant="8" id="gRs-Bw-c8J"/>
+                                                <constraint firstItem="ome-bs-GXZ" firstAttribute="top" secondItem="Ysk-v7-TQQ" secondAttribute="top" constant="8" id="iEa-OM-OU8"/>
+                                                <constraint firstItem="fnD-sr-JOy" firstAttribute="top" secondItem="ome-bs-GXZ" secondAttribute="bottom" constant="4" id="pk5-IR-z69"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -216,15 +220,15 @@
                                             <outlet property="segmentedControl" destination="fnD-sr-JOy" id="eh9-pH-jpi"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="completeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="completeCell" rowHeight="60" id="K2g-Tv-gFW" customClass="CompleteTableViewCell" customModule="AI_sampleApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="125" width="320" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="completeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="completeCell" rowHeight="54" id="K2g-Tv-gFW" customClass="CompleteTableViewCell" customModule="AI_sampleApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="154" width="320" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K2g-Tv-gFW" id="Dv8-nq-Fji">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="53"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1v-KG-to7">
-                                                    <rect key="frame" x="85" y="14" width="150" height="30"/>
+                                                    <rect key="frame" x="85" y="12" width="150" height="30"/>
                                                     <color key="backgroundColor" red="0.47450980539999998" green="0.8392156959" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="knM-Dt-oxb"/>
@@ -232,6 +236,9 @@
                                                     <state key="normal" title="完了">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="completButtonTap:" destination="7zy-Bc-tiz" eventType="touchUpInside" id="D2q-cw-tgx"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
