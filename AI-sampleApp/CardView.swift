@@ -11,6 +11,8 @@ import SnapKit
 
 class CardView: UIView {
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var thumbImageView: UIImageView!
+    
     var nibName: String = "CardView"
     var view: UIView!
     
@@ -36,7 +38,6 @@ class CardView: UIView {
     func setup() {
         view = loadViewFromNib()
         view.frame = bounds
-        //view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         addSubview(view)
         
         //Shadow

@@ -21,45 +21,11 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gW6-9s-sQf">
-                                <rect key="frame" x="40" y="80" width="240" height="400"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="thumsdown" translatesAutoresizingMaskIntoConstraints="NO" id="6D6-L6-7KQ">
-                                        <rect key="frame" x="56" y="136" width="128" height="128"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstItem="6D6-L6-7KQ" firstAttribute="centerY" secondItem="gW6-9s-sQf" secondAttribute="centerY" id="FCt-MX-hbB"/>
-                                    <constraint firstAttribute="height" constant="400" id="IqD-86-AUt"/>
-                                    <constraint firstItem="6D6-L6-7KQ" firstAttribute="centerX" secondItem="gW6-9s-sQf" secondAttribute="centerX" id="yLM-yV-XWK"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="19c-rA-F62" appends="YES" id="c4b-CB-Hmy"/>
-                                </connections>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="gW6-9s-sQf" secondAttribute="trailing" constant="40" id="3ch-B8-EfL"/>
-                            <constraint firstItem="gW6-9s-sQf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="I4B-aX-WC9"/>
-                            <constraint firstItem="gW6-9s-sQf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="xRB-8f-0ZM"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pNm-dA-HRJ"/>
-                    <connections>
-                        <outlet property="card" destination="gW6-9s-sQf" id="Awj-ZG-HNb"/>
-                        <outlet property="thumbImageView" destination="6D6-L6-7KQ" id="QMj-JL-005"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="19c-rA-F62">
-                    <connections>
-                        <action selector="panCard:" destination="BYZ-38-t0r" id="BUy-l9-l3h"/>
-                    </connections>
-                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1042.5" y="-544.0140845070423"/>
         </scene>
@@ -325,7 +291,4 @@
             <point key="canvasLocation" x="71" y="1011"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="thumsdown" width="128" height="128"/>
-    </resources>
 </document>

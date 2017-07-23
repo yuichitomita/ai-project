@@ -10,6 +10,5 @@ pod 'ZLSwipeableViewSwift', :git => 'https://github.com/zhxnlai/ZLSwipeableViewS
 pod 'SnapKit', '~> 3.2.0'
 pod 'Socket.IO-Client-Swift', '~> 8.2.0'
 pod 'JSQMessagesViewController'
-pod 'LTHRadioButton'
 end
 

@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="AI_sampleApp" customModuleProvider="target">
             <connections>
                 <outlet property="imageView" destination="aBH-K2-Z9Q" id="B7V-g4-Imi"/>
+                <outlet property="thumbImageView" destination="5n9-BL-WjR" id="GBf-Oy-BU7"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -40,7 +41,7 @@
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yps-Od-EGZ">
                     <rect key="frame" x="8" y="114" width="359" height="248.5"/>
-                    <mutableString key="text">■システムインテグレーション事業 
+                    <string key="text">■システムインテグレーション事業 
 ・お客様先における、システムの設計・開発、運用・保守やインフラ構築を行っています！楽天、日立などの大手と直接取引もあります！
 
 ■Webサービス事業 
@@ -48,18 +49,23 @@
 
 ■ITスクール/教育事業 
 ・スピードリンクアカデミー2014年度よりスタート！未経験者や経験の浅い方向けに、独自の教育プログラムを実施。スキルという武器を身につけ、これからの社会で活躍できる人材を育てます！ 
-・子会社のアントレキッズ子供向けプログラミングスクールです。ロボットを使った授業などバリエーションが豊富！</mutableString>
+・子会社のアントレキッズ子供向けプログラミングスクールです。ロボットを使った授業などバリエーションが豊富！</string>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" image="thumsup" translatesAutoresizingMaskIntoConstraints="NO" id="5n9-BL-WjR">
+                    <rect key="frame" x="123" y="269" width="128" height="128"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="O7U-z7-Ea1" firstAttribute="leading" secondItem="aBH-K2-Z9Q" secondAttribute="trailing" constant="8" id="9vk-MW-Qa0"/>
+                <constraint firstItem="5n9-BL-WjR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bnl-Is-H78"/>
                 <constraint firstAttribute="trailing" secondItem="Yps-Od-EGZ" secondAttribute="trailing" constant="8" id="FE2-ej-1Ta"/>
                 <constraint firstItem="aBH-K2-Z9Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Fo1-pu-4uN"/>
                 <constraint firstItem="Yps-Od-EGZ" firstAttribute="top" secondItem="dLD-iM-r1Z" secondAttribute="bottom" constant="8" id="Q2k-We-eTg"/>
+                <constraint firstItem="5n9-BL-WjR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Sef-ZA-0Ae"/>
                 <constraint firstItem="O7U-z7-Ea1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="bE1-rb-1gq"/>
                 <constraint firstItem="Yps-Od-EGZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ilj-mU-rnJ"/>
                 <constraint firstItem="dLD-iM-r1Z" firstAttribute="top" secondItem="aBH-K2-Z9Q" secondAttribute="bottom" constant="8" id="jYL-gJ-Bjj"/>
@@ -71,4 +77,7 @@
             <point key="canvasLocation" x="33.5" y="96.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="thumsup" width="128" height="128"/>
+    </resources>
 </document>

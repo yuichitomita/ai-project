@@ -10,6 +10,8 @@
 		BDFCA706982E8C33886057DE /* Pods_AI_sampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3A65F1864961218F417411 /* Pods_AI_sampleApp.framework */; };
 		E62E69F11F0FB3670057DF9B /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62E69F01F0FB3670057DF9B /* PostsTableViewCell.swift */; };
 		E64175FC1EBDB6E3005C512C /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64175FB1EBDB6E3005C512C /* CardView.xib */; };
+		E65EFB411F23479A00B8EADC /* CompleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EFB401F23479A00B8EADC /* CompleteTableViewCell.swift */; };
+		E65EFB431F23D75F00B8EADC /* TinderUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EFB421F23D75F00B8EADC /* TinderUIViewController.swift */; };
 		E66461C31EDDAFF000C8C1AC /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66461C21EDDAFF000C8C1AC /* Company.swift */; };
 		E66461C91EDDB16400C8C1AC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66461C81EDDB16400C8C1AC /* Post.swift */; };
 		E66461CB1EDDB2F300C8C1AC /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66461CA1EDDB2F300C8C1AC /* MessageListViewController.swift */; };
@@ -17,7 +19,6 @@
 		E68969BF1EDACAB4001F741D /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68969BE1EDACAB4001F741D /* SocketIOManager.swift */; };
 		E68969C11EDAD507001F741D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68969C01EDAD507001F741D /* ChatViewController.swift */; };
 		E68DF1101EBDA7C900D0C442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68DF10F1EBDA7C900D0C442 /* AppDelegate.swift */; };
-		E68DF1121EBDA7C900D0C442 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68DF1111EBDA7C900D0C442 /* ViewController.swift */; };
 		E68DF1151EBDA7C900D0C442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E68DF1131EBDA7C900D0C442 /* Main.storyboard */; };
 		E68DF1171EBDA7C900D0C442 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E68DF1161EBDA7C900D0C442 /* Assets.xcassets */; };
 		E68DF11A1EBDA7C900D0C442 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E68DF1181EBDA7C900D0C442 /* LaunchScreen.storyboard */; };
@@ -32,6 +33,8 @@
 		A92BBF69999569D00E4DAFC6 /* Pods-AI-sampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-sampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AI-sampleApp/Pods-AI-sampleApp.release.xcconfig"; sourceTree = "<group>"; };
 		E62E69F01F0FB3670057DF9B /* PostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		E64175FB1EBDB6E3005C512C /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		E65EFB401F23479A00B8EADC /* CompleteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteTableViewCell.swift; sourceTree = "<group>"; };
+		E65EFB421F23D75F00B8EADC /* TinderUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderUIViewController.swift; sourceTree = "<group>"; };
 		E66461C21EDDAFF000C8C1AC /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		E66461C81EDDB16400C8C1AC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E66461CA1EDDB2F300C8C1AC /* MessageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +43,6 @@
 		E68969C01EDAD507001F741D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E68DF10C1EBDA7C900D0C442 /* AI-sampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI-sampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68DF10F1EBDA7C900D0C442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E68DF1111EBDA7C900D0C442 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E68DF1141EBDA7C900D0C442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E68DF1161EBDA7C900D0C442 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E68DF1191EBDA7C900D0C442 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,8 +105,9 @@
 				E68DF10F1EBDA7C900D0C442 /* AppDelegate.swift */,
 				E69289F61F165D9E0010764C /* QuestionViewController.swift */,
 				E69289FA1F194A030010764C /* QuestionTableViewCell.swift */,
-				E68DF1111EBDA7C900D0C442 /* ViewController.swift */,
+				E65EFB421F23D75F00B8EADC /* TinderUIViewController.swift */,
 				E68DF1131EBDA7C900D0C442 /* Main.storyboard */,
+				E65EFB401F23479A00B8EADC /* CompleteTableViewCell.swift */,
 				E66461CA1EDDB2F300C8C1AC /* MessageListViewController.swift */,
 				E64175FB1EBDB6E3005C512C /* CardView.xib */,
 				E68DF1161EBDA7C900D0C442 /* Assets.xcassets */,
@@ -246,9 +249,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E65EFB431F23D75F00B8EADC /* TinderUIViewController.swift in Sources */,
 				E69289FB1F194A030010764C /* QuestionTableViewCell.swift in Sources */,
 				E68969BF1EDACAB4001F741D /* SocketIOManager.swift in Sources */,
-				E68DF1121EBDA7C900D0C442 /* ViewController.swift in Sources */,
+				E65EFB411F23479A00B8EADC /* CompleteTableViewCell.swift in Sources */,
 				E66461CB1EDDB2F300C8C1AC /* MessageListViewController.swift in Sources */,
 				E66461C31EDDAFF000C8C1AC /* Company.swift in Sources */,
 				E68800D51EBDA89300663A2B /* CardView.swift in Sources */,

@@ -22,11 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let more:UITabBarItem = UITabBarItem(tabBarSystemItem: .more,tag:3)
         
         
-        let mainVC = ViewController()
-        mainVC.tabBarItem = company
+        
+        
         //let navigationController = UINavigationController(rootViewController: mainVC)
         
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = storyboard.instantiateViewController(withIdentifier: "main") as! TinderUIViewController
+        mainVC.tabBarItem = company
         let chatVC = storyboard.instantiateViewController(withIdentifier: "MessageList") as! MessageListViewController
         chatVC.tabBarItem = message
         

@@ -7,15 +7,36 @@
 //
 
 import UIKit
+import SnapKit
 
 class TinderUIViewController: UIViewController {
 
-    @IBOutlet weak var card: UIView!
-    @IBOutlet weak var thumbImageView: UIImageView!
+    var card: CardView!
+    let images = [#imageLiteral(resourceName: "bey"), UIImage(named: "pb"), UIImage(named: "kyouken"), UIImage(named: "cookingpapa")]
+    var imageIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         
+        for image in images {
+            card = CardView()
+            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.panCard(sender:)))
+            card.addGestureRecognizer(panGestureRecognizer)
+            card.tag = imageIndex
+            card.setImage(image: image!)
+            imageIndex += 1
+            self.view.addSubview(card)
+
+            
+            self.card.snp.makeConstraints { make in
+                make.left.equalTo(self.view).offset(20)
+                make.right.equalTo(self.view).offset(-20)
+                make.top.equalTo(self.view).offset(80)
+                make.bottom.equalTo(self.view).offset(-60)
+            }
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,23 +55,25 @@ class TinderUIViewController: UIViewController {
     }
 
 
-    @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
-        let card = sender.view!
+    internal func panCard(sender: UIPanGestureRecognizer) {
+        let card = sender.view as! CardView
         let point = sender.translation(in: view)
         
         let xFromCenter = card.center.x - view.center.x
         
         card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y)
-       
+        
         if xFromCenter > 0 {
-            thumbImageView.image = #imageLiteral(resourceName: "thumsup")
-            thumbImageView.tintColor = UIColor.green
+            
+            card.thumbImageView.image = #imageLiteral(resourceName: "thumsup")
+            card.thumbImageView.tintColor = UIColor.green
         } else {
-            thumbImageView.image = #imageLiteral(resourceName: "thumsdown")
-            thumbImageView.tintColor = UIColor.red
+            
+            card.thumbImageView.image = #imageLiteral(resourceName: "thumsdown")
+            card.thumbImageView.tintColor = UIColor.red
         }
         
-        thumbImageView.alpha = abs(xFromCenter) / view.center.x
+        card.thumbImageView.alpha = abs(xFromCenter) / view.center.x
         
         if sender.state == UIGestureRecognizerState.ended {
             
@@ -73,8 +96,9 @@ class TinderUIViewController: UIViewController {
             
             UIView.animate(withDuration: 0.2) {
                 card.center = self.view.center
-                self.thumbImageView.alpha = 0.0
+                card.thumbImageView.alpha = 0.0
             }
         }
+
     }
 }
