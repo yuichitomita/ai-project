@@ -14,13 +14,25 @@ class TinderUIViewController: UIViewController {
     @IBOutlet weak var thumbImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setup()
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
       
     }
+    
+    func setup() {
+        //UIColor: Mercury
+        self.view.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
+                                                                        NSForegroundColorAttributeName : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
+        self.navigationItem.title = "新しい企業と出会う"
+    }
+
 
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
