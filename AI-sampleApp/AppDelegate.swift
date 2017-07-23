@@ -17,15 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         //タブバー設定
-        let company:UITabBarItem = UITabBarItem(title: "企業", image: UIImage(named: "company"), tag: 1)
-        let message:UITabBarItem = UITabBarItem(title: "マッチング", image: UIImage(named: "message"), tag: 2)
-        let more:UITabBarItem = UITabBarItem(tabBarSystemItem: .more,tag:3)
-        
-        
-        
-        
-        //let navigationController = UINavigationController(rootViewController: mainVC)
-        
+        let company:UITabBarItem = UITabBarItem(title: "企業", image: #imageLiteral(resourceName: "company"), tag: 1)
+        let message:UITabBarItem = UITabBarItem(title: "マッチング", image: #imageLiteral(resourceName: "message"), tag: 2)
+        let question:UITabBarItem = UITabBarItem(title: "質問", image: #imageLiteral(resourceName: "question"), tag: 3)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let mainVC = storyboard.instantiateViewController(withIdentifier: "main") as! TinderUIViewController
@@ -33,12 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let chatVC = storyboard.instantiateViewController(withIdentifier: "MessageList") as! MessageListViewController
         chatVC.tabBarItem = message
         
-        let moreVC = storyboard.instantiateViewController(withIdentifier: "question") as! QuestionViewController
-        moreVC.tabBarItem = more
-        
+        let questionVC = storyboard.instantiateViewController(withIdentifier: "question") as! QuestionViewController
+        questionVC.tabBarItem = question
         let navigationController1 = UINavigationController(rootViewController: mainVC)
         let navigationController2 = UINavigationController(rootViewController: chatVC)
-        let navigationController3 = UINavigationController(rootViewController: moreVC)
+        let navigationController3 = UINavigationController(rootViewController: questionVC)
         
         
         let viewControllers = [navigationController1,navigationController2,navigationController3]
