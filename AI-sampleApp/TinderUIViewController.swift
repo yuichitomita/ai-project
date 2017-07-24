@@ -12,20 +12,44 @@ import SnapKit
 class TinderUIViewController: UIViewController {
 
     var card: CardView!
-    let images = [#imageLiteral(resourceName: "bey"), UIImage(named: "pb"), UIImage(named: "kyouken"), UIImage(named: "cookingpapa")]
-    var imageIndex = 0
+    let images = [#imageLiteral(resourceName: "bey"), #imageLiteral(resourceName: "pb"), #imageLiteral(resourceName: "kyouken"), #imageLiteral(resourceName: "cookingpapa")]
+    let companyNames = ["株式会社キュービック","株式会社ギフト","株式会社スピードリンクジャパン","株式会社テスト"]
+    var idx = 0
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         
+        // レコメンド完了表示View
+        let completeView = UIView()
+        completeView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        let completLabel = UILabel()
+        completLabel.text = "レコメンド完了しました"
+        completLabel.center = completeView.center
+        completeView.addSubview(completLabel)
+        self.view.addSubview(completeView)
+        
+        
+        
+        completeView.snp.makeConstraints { make in
+            make.left.equalTo(self.view).offset(20)
+            make.right.equalTo(self.view).offset(-20)
+            make.top.equalTo(self.view).offset(80)
+            make.bottom.equalTo(self.view).offset(-60)
+        }
+        
+        
+        
         for image in images {
             card = CardView()
             let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.panCard(sender:)))
             card.addGestureRecognizer(panGestureRecognizer)
-            card.tag = imageIndex
-            card.setImage(image: image!)
-            imageIndex += 1
+            card.tag = idx
+            card.setImage(image: image)
+            card.companyName.text = companyNames[idx]
+            idx += 1
             self.view.addSubview(card)
 
             
