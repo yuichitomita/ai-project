@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let question:UITabBarItem = UITabBarItem(title: "質問", image: #imageLiteral(resourceName: "question"), tag: 3)
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainVC = storyboard.instantiateViewController(withIdentifier: "main") as! TinderUIViewController
+        let mainVC = storyboard.instantiateViewController(withIdentifier: "main") as! RecomendViewController
         mainVC.tabBarItem = company
         let chatVC = storyboard.instantiateViewController(withIdentifier: "MessageList") as! MessageListViewController
         chatVC.tabBarItem = message
