@@ -54,10 +54,11 @@ class QuestionViewController: UIViewController {
     }
     
     func setup() {
-        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = UIColor.Ai.theme
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
-                                                                        NSForegroundColorAttributeName : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
+                                                                        NSForegroundColorAttributeName : UIColor.Ai.fontColor]
         navigationItem.title = "Question"
+        
         //戻るボタンセット
         let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backButtonItem

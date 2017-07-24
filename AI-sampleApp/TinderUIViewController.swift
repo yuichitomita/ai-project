@@ -24,7 +24,7 @@ class TinderUIViewController: UIViewController {
         
         // レコメンド完了表示View
         let completeView = UIView()
-        completeView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        completeView.backgroundColor = UIColor.Ai.backgroundColor
         let completLabel = UILabel()
         completLabel.text = "レコメンド完了しました"
         completLabel.center = completeView.center
@@ -70,11 +70,10 @@ class TinderUIViewController: UIViewController {
     
     func setup() {
         //UIColor: Mercury
-        self.view.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
-        
-        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        self.view.backgroundColor = UIColor.Ai.backgroundColor
+        self.navigationController?.navigationBar.barTintColor = UIColor.Ai.theme
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
-                                                                        NSForegroundColorAttributeName : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)]
+                                                                        NSForegroundColorAttributeName : UIColor.Ai.fontColor]
         self.navigationItem.title = "新しい企業と出会う"
     }
 
