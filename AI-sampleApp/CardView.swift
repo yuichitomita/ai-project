@@ -12,6 +12,7 @@ import SnapKit
 class CardView: UIView {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var thumbImageView: UIImageView!
+    @IBOutlet weak var companyName: UILabel!
     
     var nibName: String = "CardView"
     var view: UIView!
