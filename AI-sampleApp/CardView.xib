@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="AI_sampleApp" customModuleProvider="target">
             <connections>
+                <outlet property="companyName" destination="O7U-z7-Ea1" id="x6Q-vP-i8s"/>
                 <outlet property="imageView" destination="aBH-K2-Z9Q" id="B7V-g4-Imi"/>
                 <outlet property="thumbImageView" destination="5n9-BL-WjR" id="GBf-Oy-BU7"/>
             </connections>
@@ -23,25 +24,26 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aBH-K2-Z9Q">
                     <rect key="frame" x="8" y="20" width="60" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="60" id="un0-Wk-lbB"/>
-                        <constraint firstAttribute="width" constant="60" id="zyR-au-Na8"/>
+                        <constraint firstAttribute="width" constant="60" id="Duh-fU-JK2"/>
+                        <constraint firstAttribute="height" constant="60" id="ghL-tH-GI9"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="株式会社スピードリンクジャパン" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7U-z7-Ea1">
-                    <rect key="frame" x="76" y="20" width="291" height="18"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <rect key="frame" x="76" y="40" width="283" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="詳細" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLD-iM-r1Z">
-                    <rect key="frame" x="8" y="88" width="31" height="18"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <rect key="frame" x="8" y="84" width="35" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yps-Od-EGZ">
-                    <rect key="frame" x="8" y="114" width="359" height="248.5"/>
-                    <string key="text">■システムインテグレーション事業 
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAg-aJ-kZy">
+                    <rect key="frame" x="8" y="112.5" width="359" height="534.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <mutableString key="text">■システムインテグレーション事業 
 ・お客様先における、システムの設計・開発、運用・保守やインフラ構築を行っています！楽天、日立などの大手と直接取引もあります！
 
 ■Webサービス事業 
@@ -49,30 +51,31 @@
 
 ■ITスクール/教育事業 
 ・スピードリンクアカデミー2014年度よりスタート！未経験者や経験の浅い方向けに、独自の教育プログラムを実施。スキルという武器を身につけ、これからの社会で活躍できる人材を育てます！ 
-・子会社のアントレキッズ子供向けプログラミングスクールです。ロボットを使った授業などバリエーションが豊富！</string>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+・子会社のアントレキッズ子供向けプログラミングスクールです。ロボットを使った授業などバリエーションが豊富！</mutableString>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" image="thumsup" translatesAutoresizingMaskIntoConstraints="NO" id="5n9-BL-WjR">
                     <rect key="frame" x="123" y="269" width="128" height="128"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="O7U-z7-Ea1" firstAttribute="leading" secondItem="aBH-K2-Z9Q" secondAttribute="trailing" constant="8" id="9vk-MW-Qa0"/>
+                <constraint firstItem="aBH-K2-Z9Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="0eL-ol-Md1"/>
+                <constraint firstAttribute="trailing" secondItem="O7U-z7-Ea1" secondAttribute="trailing" constant="16" id="1vq-A4-QAL"/>
                 <constraint firstItem="5n9-BL-WjR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bnl-Is-H78"/>
-                <constraint firstAttribute="trailing" secondItem="Yps-Od-EGZ" secondAttribute="trailing" constant="8" id="FE2-ej-1Ta"/>
-                <constraint firstItem="aBH-K2-Z9Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Fo1-pu-4uN"/>
-                <constraint firstItem="Yps-Od-EGZ" firstAttribute="top" secondItem="dLD-iM-r1Z" secondAttribute="bottom" constant="8" id="Q2k-We-eTg"/>
+                <constraint firstAttribute="bottom" secondItem="jAg-aJ-kZy" secondAttribute="bottom" constant="20" id="Fgi-Lz-1K1"/>
+                <constraint firstItem="O7U-z7-Ea1" firstAttribute="leading" secondItem="aBH-K2-Z9Q" secondAttribute="trailing" constant="8" id="JLN-o0-X1J"/>
                 <constraint firstItem="5n9-BL-WjR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Sef-ZA-0Ae"/>
-                <constraint firstItem="O7U-z7-Ea1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="bE1-rb-1gq"/>
-                <constraint firstItem="Yps-Od-EGZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ilj-mU-rnJ"/>
-                <constraint firstItem="dLD-iM-r1Z" firstAttribute="top" secondItem="aBH-K2-Z9Q" secondAttribute="bottom" constant="8" id="jYL-gJ-Bjj"/>
-                <constraint firstAttribute="trailing" secondItem="O7U-z7-Ea1" secondAttribute="trailing" constant="8" id="w3W-dD-Mt4"/>
-                <constraint firstItem="dLD-iM-r1Z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="yH5-eP-aTV"/>
-                <constraint firstItem="O7U-z7-Ea1" firstAttribute="leading" secondItem="aBH-K2-Z9Q" secondAttribute="trailing" constant="8" id="ykV-Fm-Tdb"/>
-                <constraint firstItem="aBH-K2-Z9Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="zGQ-Fe-ewi"/>
+                <constraint firstItem="dLD-iM-r1Z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Uho-T9-0rG"/>
+                <constraint firstItem="O7U-z7-Ea1" firstAttribute="leading" secondItem="aBH-K2-Z9Q" secondAttribute="trailing" constant="8" symbolic="YES" id="WVC-zd-Sa3"/>
+                <constraint firstAttribute="trailing" secondItem="jAg-aJ-kZy" secondAttribute="trailing" constant="8" id="ZIt-O0-fU4"/>
+                <constraint firstItem="jAg-aJ-kZy" firstAttribute="top" secondItem="dLD-iM-r1Z" secondAttribute="bottom" constant="8" id="aOf-oT-szx"/>
+                <constraint firstItem="jAg-aJ-kZy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="exN-e3-wh1"/>
+                <constraint firstItem="dLD-iM-r1Z" firstAttribute="top" secondItem="aBH-K2-Z9Q" secondAttribute="bottom" constant="4" id="kAT-O1-GHf"/>
+                <constraint firstItem="aBH-K2-Z9Q" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="kKu-ZN-SbY"/>
+                <constraint firstItem="aBH-K2-Z9Q" firstAttribute="centerY" secondItem="O7U-z7-Ea1" secondAttribute="centerY" id="twy-7s-TVa"/>
+                <constraint firstItem="aBH-K2-Z9Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ylZ-XU-HvH"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="96.5"/>
         </view>
