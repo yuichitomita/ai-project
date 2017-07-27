@@ -34,6 +34,7 @@ class CardView: UIView {
     // AutoLayoutなどサブビューのレイアウト適用後に呼ばれる
     override func layoutSubviews() {
         print("layoutSubviews")
+        
     }
     
     func setup() {

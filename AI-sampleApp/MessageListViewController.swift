@@ -16,7 +16,8 @@ class MessageListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setupAppearance()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -30,7 +31,7 @@ class MessageListViewController: UIViewController {
         
     }
     
-    func setup() {
+    func setupAppearance() {
         self.navigationController?.navigationBar.barTintColor = UIColor.Ai.theme
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
                                                                         NSForegroundColorAttributeName : UIColor.Ai.fontColor]

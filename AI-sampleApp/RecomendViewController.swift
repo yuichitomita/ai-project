@@ -20,28 +20,44 @@ class RecomendViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setupAppearance()
+        
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+      
+    }
+    
+    func setupAppearance() {
+        //UIColor: Mercury
+        self.view.backgroundColor = UIColor.Ai.backgroundColor
+        self.navigationController?.navigationBar.barTintColor = UIColor.Ai.theme
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
+                                                                        NSForegroundColorAttributeName : UIColor.Ai.fontColor]
+        self.navigationItem.title = "新しい企業と出会う"
         
         // レコメンド完了表示View
         let completeView = UIView()
-        completeView.backgroundColor = UIColor.Ai.backgroundColor
-        let completLabel = UILabel()
-        completLabel.text = "レコメンド完了しました"
-        completLabel.center = completeView.center
-        completeView.addSubview(completLabel)
+        completeView.backgroundColor = UIColor.white
+        
         self.view.addSubview(completeView)
         
-        
-        
         completeView.snp.makeConstraints { make in
-            make.left.equalTo(self.view).offset(20)
-            make.right.equalTo(self.view).offset(-20)
-            make.top.equalTo(self.view).offset(80)
-            make.bottom.equalTo(self.view).offset(-60)
+            make.left.equalTo(view).offset(20)
+            make.right.equalTo(view).offset(-20)
+            make.top.equalTo(view).offset(80)
+            make.bottom.equalTo(view).offset(-60)
         }
         
         
+        let completLabel = UILabel()
+        completLabel.text = "レコメンド完了しました"
+        completLabel.center = completeView.center
+        self.view.addSubview(completLabel)
+
         
+        // cardview: 10枚追加
         for image in images {
             card = CardView()
             let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(self.panCard(sender:)))
@@ -51,7 +67,7 @@ class RecomendViewController: UIViewController {
             card.companyName.text = companyNames[idx]
             idx += 1
             self.view.addSubview(card)
-
+            
             
             self.card.snp.makeConstraints { make in
                 make.left.equalTo(self.view).offset(20)
@@ -61,20 +77,6 @@ class RecomendViewController: UIViewController {
             }
             
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-      
-    }
-    
-    func setup() {
-        //UIColor: Mercury
-        self.view.backgroundColor = UIColor.Ai.backgroundColor
-        self.navigationController?.navigationBar.barTintColor = UIColor.Ai.theme
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
-                                                                        NSForegroundColorAttributeName : UIColor.Ai.fontColor]
-        self.navigationItem.title = "新しい企業と出会う"
     }
 
 
