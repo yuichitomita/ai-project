@@ -8,14 +8,20 @@
 
 import UIKit
 import JSQMessagesViewController
+import SwiftPhoenixClient
 
 class ChatViewController: JSQMessagesViewController {
     var name: String?
     var messages: [JSQMessage] = []
+    let socket = Socket(domainAndPort: "ik1-314-17400.vs.sakura.ne.jp:4000", path: "socket", transport: "websocket")
+    var topic: String? = "room:lobby"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setChatModuleParam()
+        senderDisplayName = "とみ"
+        senderId = NSUUID().uuidString
+        
+        self.connectSocket()
         
         //キーボードのジェスチャ-登録
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ChatViewController.dismissKeyboard))
@@ -24,19 +30,28 @@ class ChatViewController: JSQMessagesViewController {
         
     }
     
-    func setChatModuleParam(){
-        senderDisplayName = "とみ"
-        senderId = "self"
-        self.name = "テスト"
+    private func connectSocket(){
         
-        // Node.jsからのメッセージをブロードキャストし、画面にそれを表示
-        SocketIOManager.sharedInstance.getChatmessage{ (messageInfo) -> Void in
-            self.messages.append(messageInfo)
-            self.finishReceivingMessage(animated: true)
-        }
-        
-        SocketIOManager.sharedInstance.joinRoom(senderDisplayName)
+        socket.join(topic: topic!, message: Message(subject: "status", body: "joining")) { channel in
+            let chan = channel as! Channel
+            chan.on(event: "join") { message in
+                print("iOSからサーバーへ接続")
+            }
+            
+            chan.on(event: "new:msg") { message in
+                guard let message = message as? Message,
+                    let senderId = message["senderId"],
+                    let username = message["user"],
+                    let body = message["body"] else {
+                        return
+                }
+                let jsqMessage = JSQMessage(senderId: senderId as! String , displayName:  username as! String, text: body as! String)
+                self.messages.append(jsqMessage!)
+                self.finishReceivingMessage(animated: true)
+                
+            }
 
+        }
     }
     
     
@@ -79,15 +94,12 @@ extension ChatViewController {
     
     // Sendボタンが押された時に呼ばれる
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
-        // 新しいメッセージデータを追加する
-        let message = JSQMessage(senderId: senderId, displayName: senderDisplayName, text: text)
-        self.messages.append(message!)
-        self.finishReceivingMessage(animated: true)
-        
-        //var room = senderDisplayName
-        let room = "room-1"
+
         // サーバーへメッセージ送信
-        SocketIOManager.sharedInstance.sendMessage(room, userId: senderId, message: text, name: senderDisplayName)
+        let message = Message(message: ["senderId": senderId, "user": senderDisplayName, "body": text])
+        print(message.toJsonString())
+        let payload = Payload(topic: topic!, event: "new:msg", message: message)
+        socket.send(data: payload)
         
         // TextFieldのテキストをクリア
         self.inputToolbar.contentView.textView.text = ""
