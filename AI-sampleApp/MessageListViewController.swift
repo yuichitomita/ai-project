@@ -32,13 +32,9 @@ class MessageListViewController: UIViewController {
     }
     
     func setupAppearance() {
-        self.navigationController?.navigationBar.barTintColor = UIColor.Ai.theme
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
-                                                                        NSForegroundColorAttributeName : UIColor.Ai.fontColor]
         navigationItem.title = "マッチング"
-        //戻るボタンセット
         let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationItem.backBarButtonItem = backButtonItem
+        self.navigationItem.backBarButtonItem = backButtonItem
     }
 
     

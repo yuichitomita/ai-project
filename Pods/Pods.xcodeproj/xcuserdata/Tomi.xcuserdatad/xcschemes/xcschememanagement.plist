@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>LTHRadioButton.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-AI-sampleApp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,6 +29,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Starscream.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftPhoenixClient.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ZLSwipeableViewSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +47,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1B79A12A2DD5349FB9227F45DE7D4C7C</key>
+		<key>069EE1BF5C88C15C94FEDC2FD0DE9AF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>23B524873DC31324C1DCD47A6B1852EC</key>
+		<key>097BC099E29E3EA505A3DBB48F67F3D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>67B8802464BB90C0B85B8F2AB0E722EB</key>
+		<key>3060411B6668DDEC30669D11087079E7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>49F49BAA83FD83A5209A3326923C3486</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>805296B19F6B64F4F8234E3F89D67325</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CB694D41B5CF55B39702F06BDAF7BB5B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>D0581AF7BF4A6DA140D280B19ECC7BFF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F1AA0B3E4CB1E2C6D1250F87A134F925</key>
+		<key>F61A8BD4775E757B34F2CDDF59F3A299</key>
 		<dict>
 			<key>primary</key>
 			<true/>

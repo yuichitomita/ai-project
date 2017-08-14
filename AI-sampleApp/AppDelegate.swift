@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        
+        UINavigationBar.appearance().barTintColor = UIColor.Ai.theme
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
+                                                                        NSForegroundColorAttributeName : UIColor.Ai.fontColor]
+
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
+        
         //タブバー設定
         let company:UITabBarItem = UITabBarItem(title: "企業", image: #imageLiteral(resourceName: "company"), tag: 1)
         let message:UITabBarItem = UITabBarItem(title: "マッチング", image: #imageLiteral(resourceName: "message"), tag: 2)

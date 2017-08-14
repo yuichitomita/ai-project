@@ -54,15 +54,15 @@ class QuestionViewController: UIViewController {
     }
     
     func setupAppearance() {
-        self.navigationController?.navigationBar.barTintColor = UIColor.Ai.theme
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
-                                                                        NSForegroundColorAttributeName : UIColor.Ai.fontColor]
+//        self.navigationController?.navigationBar.barTintColor = UIColor.Ai.theme
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
+//                                                                        NSForegroundColorAttributeName : UIColor.Ai.fontColor]
         navigationItem.title = "Question"
         
-        //戻るボタンセット
-        let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationItem.backBarButtonItem = backButtonItem
-    
+//        //戻るボタンセット
+//        let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+//        navigationItem.backBarButtonItem = backButtonItem
+//    
     }
 
     //完了ボタン押下時

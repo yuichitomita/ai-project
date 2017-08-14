@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		BDFCA706982E8C33886057DE /* Pods_AI_sampleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3A65F1864961218F417411 /* Pods_AI_sampleApp.framework */; };
+		E61C8C011F26265A003D8C1C /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C8C001F26265A003D8C1C /* UIColor+Extensions.swift */; };
 		E62E69F11F0FB3670057DF9B /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E62E69F01F0FB3670057DF9B /* PostsTableViewCell.swift */; };
 		E64175FC1EBDB6E3005C512C /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E64175FB1EBDB6E3005C512C /* CardView.xib */; };
 		E65EFB411F23479A00B8EADC /* CompleteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EFB401F23479A00B8EADC /* CompleteTableViewCell.swift */; };
-		E65EFB431F23D75F00B8EADC /* TinderUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EFB421F23D75F00B8EADC /* TinderUIViewController.swift */; };
+		E65EFB431F23D75F00B8EADC /* RecomendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65EFB421F23D75F00B8EADC /* RecomendViewController.swift */; };
 		E66461C31EDDAFF000C8C1AC /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66461C21EDDAFF000C8C1AC /* Company.swift */; };
 		E66461C91EDDB16400C8C1AC /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66461C81EDDB16400C8C1AC /* Post.swift */; };
 		E66461CB1EDDB2F300C8C1AC /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66461CA1EDDB2F300C8C1AC /* MessageListViewController.swift */; };
 		E68800D51EBDA89300663A2B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68800D41EBDA89300663A2B /* CardView.swift */; };
-		E68969BF1EDACAB4001F741D /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68969BE1EDACAB4001F741D /* SocketIOManager.swift */; };
 		E68969C11EDAD507001F741D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68969C01EDAD507001F741D /* ChatViewController.swift */; };
 		E68DF1101EBDA7C900D0C442 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68DF10F1EBDA7C900D0C442 /* AppDelegate.swift */; };
 		E68DF1151EBDA7C900D0C442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E68DF1131EBDA7C900D0C442 /* Main.storyboard */; };
@@ -31,15 +31,15 @@
 		0D3A65F1864961218F417411 /* Pods_AI_sampleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AI_sampleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8864F0075C3C83D0E93B1729 /* Pods-AI-sampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-sampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AI-sampleApp/Pods-AI-sampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A92BBF69999569D00E4DAFC6 /* Pods-AI-sampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AI-sampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-AI-sampleApp/Pods-AI-sampleApp.release.xcconfig"; sourceTree = "<group>"; };
+		E61C8C001F26265A003D8C1C /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		E62E69F01F0FB3670057DF9B /* PostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		E64175FB1EBDB6E3005C512C /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		E65EFB401F23479A00B8EADC /* CompleteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompleteTableViewCell.swift; sourceTree = "<group>"; };
-		E65EFB421F23D75F00B8EADC /* TinderUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TinderUIViewController.swift; sourceTree = "<group>"; };
+		E65EFB421F23D75F00B8EADC /* RecomendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecomendViewController.swift; sourceTree = "<group>"; };
 		E66461C21EDDAFF000C8C1AC /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		E66461C81EDDB16400C8C1AC /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E66461CA1EDDB2F300C8C1AC /* MessageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
 		E68800D41EBDA89300663A2B /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		E68969BE1EDACAB4001F741D /* SocketIOManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		E68969C01EDAD507001F741D /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E68DF10C1EBDA7C900D0C442 /* AI-sampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AI-sampleApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E68DF10F1EBDA7C900D0C442 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +81,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E61C8C021F26266A003D8C1C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E61C8C001F26265A003D8C1C /* UIColor+Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E61C8C031F28E6D6003D8C1C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E69289F61F165D9E0010764C /* QuestionViewController.swift */,
+				E65EFB421F23D75F00B8EADC /* RecomendViewController.swift */,
+				E66461CA1EDDB2F300C8C1AC /* MessageListViewController.swift */,
+				E68969C01EDAD507001F741D /* ChatViewController.swift */,
+				E62E69F01F0FB3670057DF9B /* PostsTableViewCell.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E61C8C041F28E70D003D8C1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E66461C21EDDAFF000C8C1AC /* Company.swift */,
+				E69289F81F192F850010764C /* Question.swift */,
+				E66461C81EDDB16400C8C1AC /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		E68DF1031EBDA7C900D0C442 = {
 			isa = PBXGroup;
 			children = (
@@ -102,24 +132,18 @@
 		E68DF10E1EBDA7C900D0C442 /* AI-sampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				E61C8C021F26266A003D8C1C /* Extensions */,
+				E61C8C031F28E6D6003D8C1C /* ViewController */,
+				E61C8C041F28E70D003D8C1C /* Model */,
 				E68DF10F1EBDA7C900D0C442 /* AppDelegate.swift */,
-				E69289F61F165D9E0010764C /* QuestionViewController.swift */,
 				E69289FA1F194A030010764C /* QuestionTableViewCell.swift */,
-				E65EFB421F23D75F00B8EADC /* TinderUIViewController.swift */,
 				E68DF1131EBDA7C900D0C442 /* Main.storyboard */,
 				E65EFB401F23479A00B8EADC /* CompleteTableViewCell.swift */,
-				E66461CA1EDDB2F300C8C1AC /* MessageListViewController.swift */,
 				E64175FB1EBDB6E3005C512C /* CardView.xib */,
 				E68DF1161EBDA7C900D0C442 /* Assets.xcassets */,
 				E68DF1181EBDA7C900D0C442 /* LaunchScreen.storyboard */,
 				E68DF11B1EBDA7C900D0C442 /* Info.plist */,
 				E68800D41EBDA89300663A2B /* CardView.swift */,
-				E68969BE1EDACAB4001F741D /* SocketIOManager.swift */,
-				E68969C01EDAD507001F741D /* ChatViewController.swift */,
-				E66461C81EDDB16400C8C1AC /* Post.swift */,
-				E66461C21EDDAFF000C8C1AC /* Company.swift */,
-				E62E69F01F0FB3670057DF9B /* PostsTableViewCell.swift */,
-				E69289F81F192F850010764C /* Question.swift */,
 			);
 			path = "AI-sampleApp";
 			sourceTree = "<group>";
@@ -249,9 +273,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E65EFB431F23D75F00B8EADC /* TinderUIViewController.swift in Sources */,
+				E65EFB431F23D75F00B8EADC /* RecomendViewController.swift in Sources */,
 				E69289FB1F194A030010764C /* QuestionTableViewCell.swift in Sources */,
-				E68969BF1EDACAB4001F741D /* SocketIOManager.swift in Sources */,
 				E65EFB411F23479A00B8EADC /* CompleteTableViewCell.swift in Sources */,
 				E66461CB1EDDB2F300C8C1AC /* MessageListViewController.swift in Sources */,
 				E66461C31EDDAFF000C8C1AC /* Company.swift in Sources */,
@@ -262,6 +285,7 @@
 				E69289F91F192F850010764C /* Question.swift in Sources */,
 				E68DF1101EBDA7C900D0C442 /* AppDelegate.swift in Sources */,
 				E69289F71F165D9E0010764C /* QuestionViewController.swift in Sources */,
+				E61C8C011F26265A003D8C1C /* UIColor+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

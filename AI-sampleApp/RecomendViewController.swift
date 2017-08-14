@@ -30,11 +30,11 @@ class RecomendViewController: UIViewController {
     }
     
     func setupAppearance() {
-        //UIColor: Mercury
-        self.view.backgroundColor = UIColor.Ai.backgroundColor
-        self.navigationController?.navigationBar.barTintColor = UIColor.Ai.theme
-        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
-                                                                        NSForegroundColorAttributeName : UIColor.Ai.fontColor]
+//        //UIColor: Mercury
+//        self.view.backgroundColor = UIColor.Ai.backgroundColor
+//        self.navigationController?.navigationBar.barTintColor = UIColor.Ai.theme
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName : UIFont.systemFont(ofSize: 17.0),
+//                                                                        NSForegroundColorAttributeName : UIColor.Ai.fontColor]
         self.navigationItem.title = "新しい企業と出会う"
         
         // レコメンド完了表示View

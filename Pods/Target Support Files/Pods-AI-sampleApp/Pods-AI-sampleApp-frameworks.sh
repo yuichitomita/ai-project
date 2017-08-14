@@ -91,17 +91,19 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/JSQMessagesViewController/JSQMessagesViewController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/LTHRadioButton/LTHRadioButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Socket.IO-Client-Swift/SocketIO.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Starscream/Starscream.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftPhoenixClient/SwiftPhoenixClient.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ZLSwipeableViewSwift/ZLSwipeableViewSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/JSQMessagesViewController/JSQMessagesViewController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/LTHRadioButton/LTHRadioButton.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SnapKit/SnapKit.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Socket.IO-Client-Swift/SocketIO.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Starscream/Starscream.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftPhoenixClient/SwiftPhoenixClient.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ZLSwipeableViewSwift/ZLSwipeableViewSwift.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

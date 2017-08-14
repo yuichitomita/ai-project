@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F1AA0B3E4CB1E2C6D1250F87A134F925'
-               BlueprintName = 'LTHRadioButton'
+               BlueprintIdentifier = '805296B19F6B64F4F8234E3F89D67325'
+               BlueprintName = 'Starscream'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'LTHRadioButton.framework'>
+               BuildableName = 'Starscream.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

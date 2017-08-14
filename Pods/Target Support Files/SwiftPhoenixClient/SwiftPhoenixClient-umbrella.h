@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double LTHRadioButtonVersionNumber;
-FOUNDATION_EXPORT const unsigned char LTHRadioButtonVersionString[];
+FOUNDATION_EXPORT double SwiftPhoenixClientVersionNumber;
+FOUNDATION_EXPORT const unsigned char SwiftPhoenixClientVersionString[];
 
